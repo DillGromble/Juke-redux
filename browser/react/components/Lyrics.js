@@ -25,7 +25,4 @@ const Lyrics = props => {
   )
 }
 
-
-
-
 export default Lyrics;
