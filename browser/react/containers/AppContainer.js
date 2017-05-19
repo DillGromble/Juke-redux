@@ -18,7 +18,7 @@ export default class AppContainer extends Component {
 
   constructor (props) {
     super(props);
-    this.state = Object.assign({}, initialState, store.getState());
+    this.state = Object.assign(initialState, store.getState());
 
     this.toggle = this.toggle.bind(this);
     this.toggleOne = this.toggleOne.bind(this);
@@ -50,6 +50,10 @@ export default class AppContainer extends Component {
       this.next());
     AUDIO.addEventListener('timeupdate', () =>
       this.setProgress(AUDIO.currentTime / AUDIO.duration));
+  }
+
+  componentWillUnmount () {
+    this.unsubscribe();
   }
 
   onLoad (albums, artists, playlists) {

@@ -12,10 +12,10 @@ class Album extends React.Component {
 
   render () {
     const album = this.props.selectedAlbum;
-    const currentSong = this.props.currentSong;
-    const isPlaying = this.props.isPlaying;
+    const currentSong = this.props.player.currentSong; //Refactor these props values or fix comp mount
+    const isPlaying = this.props.player.isPlaying;
     const toggleOne = this.props.toggleOne;
-
+ 
     return (
       <div className="album">
         <div>
