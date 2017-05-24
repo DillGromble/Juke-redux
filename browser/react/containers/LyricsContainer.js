@@ -2,7 +2,7 @@ import React from 'react';
 import Lyrics from '../components/Lyrics';
 import fetchLyrics from '../action-creators/lyrics';
 import store from '../store';
-import axios from 'axios';
+
 
 class LyricsContainer extends React.Component {
 
